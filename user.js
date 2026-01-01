@@ -1,7 +1,11 @@
 // Open a blank page on startup, don't offer session restore unless crashed
 user_pref("browser.startup.page",1);
+user_pref("browser.startup.homepage", "about:blank");
 user_pref("browser.sessionrestore.resume_session_once",false);
-user_pref("browser.sessionrestore.resume_from_crash", true);
+user_pref("browser.sessionrestore.resume_from_crash",true);
+// If using activity-stream, disable sponsored content
+user_pref("browser.newtabpage.activity-stream.showSponsored",false)
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites",false)
 // Disable tab groups, AI tab-group naming, AI chat.
 user_pref("browser.tabs.groups.enabled",false);
 user_pref("browser.tabs.groups.smart.userEnabled",false);
@@ -38,7 +42,7 @@ user_pref("privacy.globalprivacycontrol.was_ever_enabled",true);
 user_pref("privacy.firstparty.isolate",true);
 // No geolocation
 user_pref("geo.enabled",false);
-// Firefox Sync (but just for browser config)
+// Use Firefox Sync for prefs and extensions exclusively
 user_pref("services.sync.engine.addons", true);
 user_pref("services.sync.engine.prefs", true);
 user_pref("services.sync.engine.bookmarks", false);
@@ -47,5 +51,3 @@ user_pref("services.sync.engine.tabs", false);
 user_pref("services.sync.engine.passwords", false);
 user_pref("services.sync.engine.addresses", false);
 user_pref("services.sync.engine.creditcards", false);
-
-
