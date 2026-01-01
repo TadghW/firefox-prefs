@@ -42,9 +42,9 @@ user_pref("privacy.globalprivacycontrol.was_ever_enabled",true);
 user_pref("privacy.firstparty.isolate",true);
 // No geolocation
 user_pref("geo.enabled",false);
-// Use Firefox Sync for prefs and extensions exclusively
+// Use Firefox Sync for extensions exclusively
 user_pref("services.sync.engine.addons", true);
-user_pref("services.sync.engine.prefs", true);
+user_pref("services.sync.engine.prefs", false);
 user_pref("services.sync.engine.bookmarks", false);
 user_pref("services.sync.engine.history", false);
 user_pref("services.sync.engine.tabs", false);
